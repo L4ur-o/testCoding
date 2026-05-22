@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ============================================================
-           CSS COMPLETO - TECHACADEMY PLATAFORMA EDUCACIONAL
+           CSS COMPLETO - TECHACADEMY (SEM A SEÇÃO HERO)
            ============================================================ */
 
         /* --- VARIÁVEIS CSS (:root) --- */
@@ -563,177 +563,6 @@
         .mobile-menu a.active {
             background: var(--color-primary-light);
             color: var(--color-primary);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: var(--bg-hero);
-            position: relative;
-            overflow: hidden;
-            padding-top: var(--nav-height);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--bg-hero-overlay);
-            z-index: 0;
-        }
-        .hero-bg-pattern {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            opacity: 0.08;
-            background-image: radial-gradient(circle at 30% 50%, #ffffff 1px, transparent 1px),
-                radial-gradient(circle at 70% 30%, #ffffff 1px, transparent 1px),
-                radial-gradient(circle at 50% 80%, #ffffff 1px, transparent 1px);
-            background-size: 60px 60px, 80px 80px, 50px 50px;
-            background-position: 0 0, 20px 20px, 40px 40px;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(2rem, 6vw, 5rem);
-            align-items: center;
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: var(--container-padding);
-        }
-        .hero-text {
-            color: #fff;
-        }
-        .hero-text .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-            color: #fff;
-            font-weight: var(--font-weight-semibold);
-            font-size: var(--font-size-xs);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 0.4rem 1.1rem;
-            border-radius: var(--border-radius-full);
-            margin-bottom: var(--spacing-md);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .hero-text h1 {
-            font-size: clamp(2.2rem, 5vw, var(--font-size-5xl));
-            font-weight: var(--font-weight-extrabold);
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: var(--spacing-md);
-        }
-        .hero-text h1 span {
-            color: #a5f0fc;
-            display: inline-block;
-            position: relative;
-        }
-        .hero-text h1 span::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--color-secondary);
-            border-radius: 2px;
-            opacity: 0.6;
-        }
-        .hero-text p {
-            font-size: var(--font-size-lg);
-            color: rgba(255, 255, 255, 0.85);
-            line-height: var(--line-height-relaxed);
-            margin-bottom: var(--spacing-lg);
-            max-width: 480px;
-        }
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .hero-image-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            aspect-ratio: 1;
-            border-radius: var(--border-radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(4px);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10rem;
-            color: rgba(255, 255, 255, 0.7);
-            transition: transform var(--transition-slow);
-        }
-        .hero-image:hover {
-            transform: scale(1.03) rotate(-1deg);
-        }
-        .hero-float-card {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-radius: var(--border-radius-md);
-            padding: 0.8rem 1.2rem;
-            box-shadow: var(--shadow-lg);
-            font-weight: var(--font-weight-semibold);
-            font-size: var(--font-size-sm);
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            animation: floatCard 4s ease-in-out infinite;
-        }
-        .hero-float-card.card-1 {
-            top: 8%;
-            right: -5%;
-            animation-delay: 0s;
-        }
-        .hero-float-card.card-2 {
-            bottom: 15%;
-            left: -8%;
-            animation-delay: 1.5s;
-        }
-        .hero-float-card .float-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-        }
-        .hero-float-card .float-icon.green {
-            background: #d1fae5;
-            color: #059669;
-        }
-        .hero-float-card .float-icon.purple {
-            background: #ede9fe;
-            color: #7c3aed;
-        }
-
-        @keyframes floatCard {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-16px);
-            }
         }
 
         /* --- SEÇÃO QUEM SOU EU --- */
@@ -1338,19 +1167,6 @@
 
         /* --- RESPONSIVIDADE --- */
         @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-text p {
-                max-width: 100%;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-image-wrapper {
-                display: none;
-            }
             .about-grid {
                 grid-template-columns: 1fr;
             }
@@ -1389,13 +1205,6 @@
             .mobile-menu {
                 display: flex;
             }
-            .hero {
-                min-height: auto;
-                padding: calc(var(--nav-height) + 3rem) 0 4rem;
-            }
-            .hero-text h1 {
-                font-size: 2rem;
-            }
             .about-stats {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1426,9 +1235,6 @@
         @media (max-width: 480px) {
             :root {
                 --nav-height: 60px;
-            }
-            .hero-text h1 {
-                font-size: 1.7rem;
             }
             .btn {
                 padding: 0.6rem 1.3rem;
@@ -1486,35 +1292,6 @@
         <a href="#modulos">Módulos</a>
         <a href="#contato">Contato</a>
     </div>
-
-    <!-- ============================================================
-    HERO SECTION
-    ============================================================ -->
-    <section class="hero" id="home" aria-labelledby="heroTitle">
-        <div class="hero-bg-pattern" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="hero-badge">🚀 Plataforma Educacional</span>
-                <h1 id="heroTitle">Domine a <span>Web Moderna</span> com Aulas Interativas</h1>
-                <p>Aprenda HTML, CSS, JavaScript e muito mais com uma metodologia prática e projetos reais. Do zero ao profissional em desenvolvimento web.</p>
-                <div class="hero-buttons">
-                    <a href="aulas.html" class="btn btn-primary btn-lg">🚀 Começar Curso</a>
-                    <a href="#modulos" class="btn btn-outline btn-lg">📚 Ver Aulas</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-image" aria-hidden="true">
-                    💻
-                </div>
-                <div class="hero-float-card card-1">
-                    <span class="float-icon green">✅</span> 40+ Aulas
-                </div>
-                <div class="hero-float-card card-2">
-                    <span class="float-icon purple">⭐</span> 4.9 Avaliação
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ============================================================
     SEÇÃO QUEM SOU EU
@@ -1907,7 +1684,7 @@
             // ============================================================
             // LOG INICIAL
             // ============================================================
-            console.log('🚀 TechAcademy - Plataforma Educacional');
+            console.log('🚀 TechAcademy - Plataforma Educacional (Hero removido)');
             console.log('📚 Módulos carregados:', aulasData.modulos.length);
             console.log('🎨 Tema atual:', getSavedTheme());
             console.log('💾 Progresso salvo:', getProgress());
