@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma educacional moderna - Cursos online de tecnologia e desenvolvimento web com aulas interativas e conteúdo atualizado.">
+    <meta name="keywords" content="cursos online, aulas, tecnologia, desenvolvimento web, programação, html, css, javascript">
+    <meta name="author" content="Prof. Digital">
+    <meta property="og:title" content="TechAcademy - Plataforma Educacional">
+    <meta property="og:description" content="Aprenda tecnologia com aulas modernas e interativas. Cursos de desenvolvimento web, front-end e muito mais.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://techacademy.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#4f46e5">
+    <title>TechAcademy - Plataforma Educacional | Cursos de Tecnologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           CSS COMPLETO - TECHACADEMY PLATAFORMA EDUCACIONAL
+           ============================================================ */
+
+        /* --- VARIÁVEIS CSS (:root) --- */
+        :root {
+            /* Cores - Tema Claro */
+            --color-primary: #4f46e5;
+            --color-primary-hover: #4338ca;
+            --color-primary-light: #eef2ff;
+            --color-primary-glow: rgba(79, 70, 229, 0.25);
+            --color-secondary: #06b6d4;
+            --color-secondary-hover: #0891b2;
+            --color-accent: #f59e0b;
+            --color-accent-hover: #d97706;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --color-info: #3b82f6;
+
+            /* Superfícies - Claro */
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-alt: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-hero: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4f46e5 60%, #06b6d4 100%);
+            --bg-hero-overlay: rgba(0, 0, 0, 0.35);
+            --bg-nav: rgba(255, 255, 255, 0.85);
+            --bg-nav-scrolled: rgba(255, 255, 255, 0.95);
+            --bg-footer: #0f172a;
+            --bg-input: #ffffff;
+            --bg-badge: #eef2ff;
+            --bg-progress: #e2e8f0;
+            --bg-modal-overlay: rgba(0, 0, 0, 0.6);
+            --bg-code: #1e293b;
+
+            /* Texto - Claro */
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --text-inverse: #ffffff;
+            --text-on-primary: #ffffff;
+            --text-link: #4f46e5;
+            --text-code: #e2e8f0;
+
+            /* Bordas - Claro */
+            --border-color: #e2e8f0;
+            --border-color-light: #f1f5f9;
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 24px;
+            --border-radius-full: 9999px;
+
+            /* Sombras - Claro */
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.11);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --shadow-card-hover: 0 16px 40px rgba(79, 70, 229, 0.18);
+            --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.08);
+
+            /* Tipografia */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.85rem;
+            --font-size-base: 1rem;
+            --font-size-md: 1.1rem;
+            --font-size-lg: 1.2rem;
+            --font-size-xl: 1.4rem;
+            --font-size-2xl: 1.75rem;
+            --font-size-3xl: 2.2rem;
+            --font-size-4xl: 2.8rem;
+            --font-size-5xl: 3.5rem;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --line-height-relaxed: 1.7;
+
+            /* Espaçamento */
+            --spacing-xs: 0.4rem;
+            --spacing-sm: 0.7rem;
+            --spacing-md: 1.2rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4.5rem;
+            --spacing-3xl: 7rem;
+            --section-padding: clamp(3rem, 7vw, 7rem);
+
+            /* Transições */
+            --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            /* Layout */
+            --max-width: 1200px;
+            --nav-height: 72px;
+            --container-padding: clamp(1rem, 4vw, 2.5rem);
+        }
+
+        /* --- TEMA ESCURO --- */
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-surface: #1e293b;
+            --bg-surface-alt: #253248;
+            --bg-card: #1e293b;
+            --bg-hero: linear-gradient(135deg, #0a0a1a 0%, #1a1035 30%, #1e1b4b 60%, #0f2a35 100%);
+            --bg-hero-overlay: rgba(0, 0, 0, 0.55);
+            --bg-nav: rgba(15, 23, 42, 0.85);
+            --bg-nav-scrolled: rgba(15, 23, 42, 0.95);
+            --bg-footer: #020617;
+            --bg-input: #1e293b;
+            --bg-badge: #312e81;
+            --bg-progress: #334155;
+            --bg-code: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #64748b;
+            --text-inverse: #0f172a;
+            --text-on-primary: #ffffff;
+            --text-link: #818cf8;
+            --text-code: #e2e8f0;
+            --border-color: #334155;
+            --border-color-light: #253248;
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+            --shadow-card-hover: 0 16px 40px rgba(79, 70, 229, 0.3);
+            --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- RESET E ESTILOS BASE --- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+            color: var(--text-primary);
+            background-color: var(--bg-body);
+            transition: background-color var(--transition-base), color var(--transition-base);
+            overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--text-link);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        a:hover {
+            color: var(--color-primary-hover);
+        }
+        a:focus-visible {
+            outline: 3px solid var(--color-primary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            background: none;
+            font-size: inherit;
+            transition: all var(--transition-fast);
+        }
+        button:focus-visible {
+            outline: 3px solid var(--color-primary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: var(--line-height-tight);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+        }
+
+        /* --- UTILITÁRIOS --- */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        .section-header .badge {
+            display: inline-block;
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 1rem;
+            border-radius: var(--border-radius-full);
+            margin-bottom: var(--spacing-sm);
+        }
+        .section-header h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+        .section-header p {
+            font-size: var(--font-size-md);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.8rem;
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-base);
+            border-radius: var(--border-radius-full);
+            transition: all var(--transition-spring);
+            white-space: nowrap;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0);
+            transition: background var(--transition-fast);
+            border-radius: inherit;
+        }
+        .btn:hover::after {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--text-on-primary);
+            box-shadow: 0 4px 16px var(--color-primary-glow);
+        }
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            box-shadow: 0 8px 28px var(--color-primary-glow);
+            transform: translateY(-2px);
+            color: var(--text-on-primary);
+        }
+
+        .btn-secondary {
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-inverse);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #fff;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1.2rem;
+            font-size: var(--font-size-sm);
+        }
+        .btn-lg {
+            padding: 0.95rem 2.2rem;
+            font-size: var(--font-size-lg);
+        }
+
+        .btn-icon {
+            width: 42px;
+            height: 42px;
+            padding: 0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- NAVEGAÇÃO --- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            background: var(--bg-nav);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-base);
+            box-shadow: none;
+        }
+        .nav.scrolled {
+            background: var(--bg-nav-scrolled);
+            border-bottom-color: var(--border-color);
+            box-shadow: var(--shadow-nav);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: var(--font-weight-extrabold);
+            font-size: var(--font-size-xl);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .nav-logo .logo-icon {
+            background-image: url(assets/images/braincontrol.png);
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            transition: transform var(--transition-spring);
+        }
+        .nav-logo:hover .logo-icon {
+            transform: rotate(-8deg) scale(1.08);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .nav-links a {
+            padding: 0.55rem 1rem;
+            border-radius: var(--border-radius-full);
+            font-weight: var(--font-weight-medium);
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
+            font-size: var(--font-size-sm);
+            position: relative;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-primary);
+            background: var(--color-primary-light);
+        }
+        .nav-links a.active {
+            font-weight: var(--font-weight-semibold);
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        /* Botão Dark Mode */
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-surface-alt);
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all var(--transition-spring);
+            color: var(--text-primary);
+        }
+        .theme-toggle:hover {
+            border-color: var(--color-primary);
+            background: var(--color-primary-light);
+            transform: rotate(20deg);
+        }
+        .theme-toggle .icon-sun {
+            display: none;
+        }
+        .theme-toggle .icon-moon {
+            display: block;
+        }
+        [data-theme="dark"] .theme-toggle .icon-sun {
+            display: block;
+        }
+        [data-theme="dark"] .theme-toggle .icon-moon {
+            display: none;
+        }
+
+        /* Menu Hamburguer */
+        .hamburger {
+            display: none;
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: var(--bg-surface-alt);
+            border: 2px solid var(--border-color);
+            z-index: 1001;
+            transition: all var(--transition-fast);
+        }
+        .hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: all var(--transition-spring);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--bg-body);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-base);
+        }
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .mobile-menu a {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius-full);
+            transition: all var(--transition-fast);
+        }
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--bg-hero);
+            position: relative;
+            overflow: hidden;
+            padding-top: var(--nav-height);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--bg-hero-overlay);
+            z-index: 0;
+        }
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.08;
+            background-image: radial-gradient(circle at 30% 50%, #ffffff 1px, transparent 1px),
+                radial-gradient(circle at 70% 30%, #ffffff 1px, transparent 1px),
+                radial-gradient(circle at 50% 80%, #ffffff 1px, transparent 1px);
+            background-size: 60px 60px, 80px 80px, 50px 50px;
+            background-position: 0 0, 20px 20px, 40px 40px;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 6vw, 5rem);
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--container-padding);
+        }
+        .hero-text {
+            color: #fff;
+        }
+        .hero-text .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.4rem 1.1rem;
+            border-radius: var(--border-radius-full);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 5vw, var(--font-size-5xl));
+            font-weight: var(--font-weight-extrabold);
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-md);
+        }
+        .hero-text h1 span {
+            color: #a5f0fc;
+            display: inline-block;
+            position: relative;
+        }
+        .hero-text h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--color-secondary);
+            border-radius: 2px;
+            opacity: 0.6;
+        }
+        .hero-text p {
+            font-size: var(--font-size-lg);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-lg);
+            max-width: 480px;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: transform var(--transition-slow);
+        }
+        .hero-image:hover {
+            transform: scale(1.03) rotate(-1deg);
+        }
+        .hero-float-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: var(--border-radius-md);
+            padding: 0.8rem 1.2rem;
+            box-shadow: var(--shadow-lg);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-sm);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: floatCard 4s ease-in-out infinite;
+        }
+        .hero-float-card.card-1 {
+            top: 8%;
+            right: -5%;
+            animation-delay: 0s;
+        }
+        .hero-float-card.card-2 {
+            bottom: 15%;
+            left: -8%;
+            animation-delay: 1.5s;
+        }
+        .hero-float-card .float-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        .hero-float-card .float-icon.green {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .hero-float-card .float-icon.purple {
+            background: #ede9fe;
+            color: #7c3aed;
+        }
+
+        @keyframes floatCard {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        /* --- SEÇÃO QUEM SOU EU --- */
+        .about-section {
+            background: var(--bg-surface);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: clamp(2rem, 5vw, 4rem);
+            align-items: start;
+        }
+        .about-photo-card {
+            position: sticky;
+            top: calc(var(--nav-height) + 2rem);
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color-light);
+            transition: all var(--transition-base);
+        }
+        .about-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #fff;
+            font-weight: var(--font-weight-extrabold);
+            box-shadow: 0 8px 32px var(--color-primary-glow);
+        }
+        .about-photo-card h3 {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+        }
+        .about-photo-card .role {
+            color: var(--color-primary);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+        .about-social-links {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        .about-social-links a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-surface-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            transition: all var(--transition-spring);
+            border: 2px solid transparent;
+        }
+        .about-social-links a:hover {
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+        .about-details h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--spacing-sm);
+        }
+        .about-details .subtitle {
+            color: var(--color-primary);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-md);
+        }
+        .about-details p {
+            color: var(--text-secondary);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-md);
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: var(--spacing-lg);
+        }
+        .about-stat {
+            background: var(--bg-surface-alt);
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            border: 1px solid var(--border-color-light);
+            transition: all var(--transition-base);
+        }
+        .about-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+        .about-stat .stat-number {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--color-primary);
+        }
+        .about-stat .stat-label {
+            font-size: var(--font-size-xs);
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* --- SEÇÃO DO CURSO --- */
+        .course-section {
+            background: var(--bg-body);
+        }
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: var(--spacing-lg);
+        }
+        .course-feature {
+            background: var(--bg-card);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--border-color-light);
+            box-shadow: var(--shadow-xs);
+            transition: all var(--transition-spring);
+            text-align: center;
+        }
+        .course-feature:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--color-primary);
+        }
+        .course-feature .feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto var(--spacing-sm);
+            transition: transform var(--transition-spring);
+        }
+        .course-feature:hover .feature-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+        .feature-icon.blue {
+            background: #eef2ff;
+            color: #4f46e5;
+        }
+        .feature-icon.cyan {
+            background: #ecfeff;
+            color: #06b6d4;
+        }
+        .feature-icon.amber {
+            background: #fffbeb;
+            color: #f59e0b;
+        }
+        .feature-icon.green {
+            background: #ecfdf5;
+            color: #10b981;
+        }
+        .course-feature h3 {
+            font-size: var(--font-size-md);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: 0.3rem;
+        }
+        .course-feature p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* --- SEÇÃO DE MÓDULOS PREVIEW --- */
+        .modules-preview {
+            background: var(--bg-surface);
+        }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .module-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color-light);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-spring);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .module-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--color-primary);
+        }
+        .module-card .module-number {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--color-primary-light);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            line-height: 1;
+            transition: color var(--transition-base);
+        }
+        .module-card:hover .module-number {
+            color: rgba(79, 70, 229, 0.2);
+        }
+        .module-card .module-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .module-card h3 {
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 0.3rem;
+            font-size: var(--font-size-lg);
+        }
+        .module-card p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-relaxed);
+        }
+        .module-card .lesson-count {
+            display: inline-block;
+            margin-top: var(--spacing-sm);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            background: var(--color-primary-light);
+            padding: 0.25rem 0.7rem;
+            border-radius: var(--border-radius-full);
+        }
+
+        /* --- CTA SECTION --- */
+        .cta-section {
+            background: var(--bg-hero);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            color: #fff;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--bg-hero-overlay);
+            z-index: 0;
+        }
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        .cta-section h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-extrabold);
+            color: #fff;
+            margin-bottom: var(--spacing-sm);
+        }
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: var(--font-size-md);
+            margin-bottom: var(--spacing-lg);
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: var(--bg-footer);
+            color: #cbd5e1;
+            padding: var(--spacing-2xl) 0 var(--spacing-lg);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: var(--spacing-xl);
+        }
+        .footer h4 {
+            color: #fff;
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer a {
+            color: #94a3b8;
+            font-size: var(--font-size-sm);
+            display: block;
+            padding: 0.2rem 0;
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-lg);
+            text-align: center;
+            font-size: var(--font-size-xs);
+            color: #64748b;
+        }
+
+        /* --- PÁGINA DE AULAS (aulas.html) --- */
+        .page-header {
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
+            padding: calc(var(--nav-height) + 2rem) 0 2rem;
+        }
+        .page-header h1 {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-extrabold);
+        }
+        .page-header p {
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+        }
+        .search-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        .search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 0.75rem 1.2rem;
+            border-radius: var(--border-radius-full);
+            border: 2px solid var(--border-color);
+            background: var(--bg-input);
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            color: var(--text-primary);
+            transition: all var(--transition-fast);
+        }
+        .search-input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px var(--color-primary-glow);
+            outline: none;
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+        .filter-tab {
+            padding: 0.5rem 1.1rem;
+            border-radius: var(--border-radius-full);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-sm);
+            background: var(--bg-surface-alt);
+            color: var(--text-secondary);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        .lessons-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: var(--spacing-lg);
+        }
+        .lesson-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1rem;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--border-color-light);
+            box-shadow: var(--shadow-xs);
+            transition: all var(--transition-spring);
+            cursor: pointer;
+        }
+        .lesson-card:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+        .lesson-card .lesson-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--font-weight-extrabold);
+            font-size: var(--font-size-md);
+            flex-shrink: 0;
+        }
+        .lesson-card.completed .lesson-number {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .lesson-card .lesson-info h3 {
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-base);
+        }
+        .lesson-card .lesson-info p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+        .lesson-card .lesson-meta {
+            text-align: right;
+            font-size: var(--font-size-xs);
+            color: var(--text-tertiary);
+            white-space: nowrap;
+        }
+        .lesson-card .status-badge {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: var(--border-radius-full);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+        }
+        .status-badge.completed {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .status-badge.in-progress {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        .status-badge.locked {
+            background: #f1f5f9;
+            color: #94a3b8;
+        }
+
+        /* --- PÁGINA DE DETALHES DA AULA --- */
+        .lesson-detail-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 2rem;
+            padding-top: calc(var(--nav-height) + 1.5rem);
+            padding-bottom: var(--spacing-2xl);
+        }
+        .lesson-main {
+            min-width: 0;
+        }
+        .lesson-main h1 {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: 0.5rem;
+        }
+        .lesson-main .meta-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+        }
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--border-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform var(--transition-base);
+        }
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+        .video-placeholder .play-btn {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--color-primary);
+            transition: all var(--transition-spring);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .video-placeholder:hover .play-btn {
+            transform: scale(1.15);
+            background: #fff;
+        }
+        .content-block {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color-light);
+        }
+        .content-block h3 {
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+        .content-block ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+        .lesson-sidebar {
+            position: sticky;
+            top: calc(var(--nav-height) + 1.5rem);
+            align-self: start;
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color-light);
+            box-shadow: var(--shadow-sm);
+        }
+        .progress-bar {
+            height: 6px;
+            background: var(--bg-progress);
+            border-radius: 3px;
+            margin: var(--spacing-sm) 0;
+            overflow: hidden;
+        }
+        .progress-bar .fill {
+            height: 100%;
+            background: var(--color-primary);
+            border-radius: 3px;
+            transition: width var(--transition-slow);
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        /* --- SCROLL TO TOP --- */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: #fff;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 99;
+            opacity: 0;
+            pointer-events: none;
+            transition: all var(--transition-spring);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-top-btn.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .scroll-top-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* --- ANIMAÇÕES AO SCROLL --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                display: none;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-photo-card {
+                position: static;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1rem;
+                text-align: left;
+            }
+            .about-photo {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+                margin: 0;
+            }
+            .lesson-detail-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .lesson-sidebar {
+                position: static;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .mobile-menu {
+                display: flex;
+            }
+            .hero {
+                min-height: auto;
+                padding: calc(var(--nav-height) + 3rem) 0 4rem;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+            .course-features {
+                grid-template-columns: 1fr;
+            }
+            .lesson-card {
+                grid-template-columns: auto 1fr;
+            }
+            .lesson-card .lesson-meta {
+                display: none;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .search-bar {
+                flex-direction: column;
+            }
+            .filter-tabs {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --nav-height: 60px;
+            }
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+            .btn {
+                padding: 0.6rem 1.3rem;
+                font-size: var(--font-size-sm);
+            }
+            .btn-lg {
+                padding: 0.7rem 1.6rem;
+                font-size: var(--font-size-base);
+            }
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            .section-header h2 {
+                font-size: var(--font-size-2xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================================
+    NAVEGAÇÃO PRINCIPAL
+    ============================================================ -->
+    <nav class="nav" id="mainNav" role="navigation" aria-label="Navegação principal">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="TechAcademy - Página inicial">
+                <div class="logo-icon"></div>
+                <span>TechAcademy</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="aulas.html">Aulas</a>
+                <a href="#modulos">Módulos</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="index.html" class="active">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="aulas.html">Aulas</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <!-- ============================================================
+    HERO SECTION
+    ============================================================ -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🚀 Plataforma Educacional</span>
+                <h1 id="heroTitle">Domine a <span>Web Moderna</span> com Aulas Interativas</h1>
+                <p>Aprenda HTML, CSS, JavaScript e muito mais com uma metodologia prática e projetos reais. Do zero ao profissional em desenvolvimento web.</p>
+                <div class="hero-buttons">
+                    <a href="aulas.html" class="btn btn-primary btn-lg">🚀 Começar Curso</a>
+                    <a href="#modulos" class="btn btn-outline btn-lg">📚 Ver Aulas</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image" aria-hidden="true">
+                    💻
+                </div>
+                <div class="hero-float-card card-1">
+                    <span class="float-icon green">✅</span> 40+ Aulas
+                </div>
+                <div class="hero-float-card card-2">
+                    <span class="float-icon purple">⭐</span> 4.9 Avaliação
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SEÇÃO QUEM SOU EU
+    ============================================================ -->
+    <section class="section about-section" id="sobre" aria-labelledby="aboutTitle">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-photo-card">
+                    <div class="about-photo" aria-hidden="true">PD</div>
+                    <h3>Prof. Digital</h3>
+                    <p class="role">Desenvolvedor Full-Stack & Instrutor</p>
+                    <p style="font-size:0.85rem;color:var(--text-secondary);">10+ anos de experiência em desenvolvimento web e ensino de tecnologia.</p>
+                    <div class="about-social-links">
+                        <a href="#" aria-label="GitHub" title="GitHub">🐙</a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn">💼</a>
+                        <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
+                        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <span class="badge" style="background:var(--color-primary-light);color:var(--color-primary);">Sobre Mim</span>
+                    <h2 id="aboutTitle">Quem Sou Eu</h2>
+                    <p class="subtitle">Transformando vidas através da educação em tecnologia</p>
+                    <p>Sou desenvolvedor full-stack com mais de <strong>10 anos de experiência</strong> no mercado. Formado em Ciência da Computação pela Universidade Federal, com especialização em Engenharia de Software e pós-graduação em Metodologias Ativas de Ensino.</p>
+                    <p>Já ajudei <strong>mais de 5.000 alunos</strong> a ingressarem na área de tecnologia através de cursos presenciais e online. Minha missão é democratizar o acesso ao conhecimento tech com aulas práticas, diretas e atualizadas.</p>
+                    <p><strong>Metodologia:</strong> Aprendizado baseado em projetos, com exercícios práticos, desafios reais e suporte contínuo. Acredito que se aprende fazendo!</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">5k+</span>
+                            <span class="stat-label">Alunos</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Aulas</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Avaliação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SEÇÃO DO CURSO
+    ============================================================ -->
+    <section class="section course-section" id="curso" aria-labelledby="courseTitle">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">O Curso</span>
+                <h2 id="courseTitle">O Que Você Vai Aprender</h2>
+                <p>Um programa completo de desenvolvimento web, cobrindo desde os fundamentos até técnicas avançadas.</p>
+            </div>
+            <div class="course-features reveal">
+                <div class="course-feature">
+                    <div class="feature-icon blue">🎯</div>
+                    <h3>Objetivos Gerais</h3>
+                    <p>Dominar HTML5, CSS3 e JavaScript ES6+ para construir sites e aplicações web modernas do zero.</p>
+                </div>
+                <div class="course-feature">
+                    <div class="feature-icon cyan">👥</div>
+                    <h3>Público-Alvo</h3>
+                    <p>Iniciantes em programação, estudantes, profissionais em transição de carreira e entusiastas da tecnologia.</p>
+                </div>
+                <div class="course-feature">
+                    <div class="feature-icon amber">📋</div>
+                    <h3>Pré-requisitos</h3>
+                    <p>Nenhum! Basta ter um computador com acesso à internet e vontade de aprender. Começamos do zero absoluto.</p>
+                </div>
+                <div class="course-feature">
+                    <div class="feature-icon green">⏱️</div>
+                    <h3>Duração</h3>
+                    <p>8 módulos com 40+ aulas, totalizando aproximadamente 60 horas de conteúdo prático e exercícios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SEÇÃO DE MÓDULOS PREVIEW
+    ============================================================ -->
+    <section class="section modules-preview" id="modulos" aria-labelledby="modulesTitle">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Estrutura</span>
+                <h2 id="modulesTitle">Módulos do Curso</h2>
+                <p>Conteúdo organizado em módulos progressivos para facilitar seu aprendizado.</p>
+            </div>
+            <div class="modules-grid reveal" id="modulesGrid">
+                <!-- Preenchido via JavaScript -->
+            </div>
+            <div style="text-align:center;margin-top:var(--spacing-xl);">
+                <a href="aulas.html" class="btn btn-primary btn-lg">📚 Ver Todas as Aulas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CTA SECTION
+    ============================================================ -->
+    <section class="cta-section section" id="contato" aria-labelledby="ctaTitle">
+        <div class="container reveal">
+            <h2 id="ctaTitle">Pronto para Começar?</h2>
+            <p>Junte-se a milhares de alunos que já estão transformando suas carreiras. Acesse as aulas agora mesmo e dê o primeiro passo!</p>
+            <a href="aulas.html" class="btn btn-primary btn-lg">🚀 Acessar Aulas Gratuitamente</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>🎓 TechAcademy</h4>
+                    <p style="font-size:0.85rem;color:#94a3b8;margin-top:0.5rem;">Plataforma educacional moderna para quem quer dominar tecnologia. Aulas práticas, atualizadas e acessíveis.</p>
+                </div>
+                <div>
+                    <h4>Navegação</h4>
+                    <a href="index.html">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="aulas.html">Aulas</a>
+                    <a href="#modulos">Módulos</a>
+                </div>
+                <div>
+                    <h4>Recursos</h4>
+                    <a href="aulas.html">Todos os Cursos</a>
+                    <a href="#">Material Complementar</a>
+                    <a href="#">Exercícios</a>
+                    <a href="#">Certificado</a>
+                </div>
+                <div>
+                    <h4>Contato</h4>
+                    <a href="#">Email: contato@techacademy.com</a>
+                    <a href="#">Suporte</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechAcademy. Todos os direitos reservados. Feito com 💜 para educar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ============================================================
+            // DADOS DAS AULAS (simulando JSON carregado)
+            // ============================================================
+            const aulasData = {
+                modulos: [
+                    { id: 1, nome: 'Fundamentos da Web', icone: '🌐', descricao: 'Conceitos básicos de internet, navegadores e estrutura da web.',
+                        aulas: [
+                            { id: 1, titulo: 'Introdução à Internet', descricao: 'Como funciona a web, protocolos HTTP/HTTPS e estrutura cliente-servidor.',
+                                duracao: '15min', status: 'completed' },
+                            { id: 2, titulo: 'Estrutura de um Site', descricao: 'Entendendo a anatomia de páginas web e a tríade HTML, CSS e JS.',
+                                duracao: '20min', status: 'completed' },
+                            { id: 3, titulo: 'Ferramentas do Desenvolvedor',
+                                descricao: 'Configurando VS Code, navegador e extensões essenciais.', duracao: '18min',
+                                status: 'in-progress' },
+                            { id: 4, titulo: 'Versionamento com Git', descricao: 'Introdução ao Git e GitHub para controle de versões.',
+                                duracao: '25min', status: 'locked' },
+                            { id: 5, titulo: 'Hospedagem e Domínio', descricao: 'Como publicar seu site na internet gratuitamente.',
+                                duracao: '15min', status: 'locked' },
+                        ]
+                    },
+                    { id: 2, nome: 'HTML5 Semântico', icone: '📝', descricao: 'Estruturação de páginas com HTML5 moderno e tags semânticas.',
+                        aulas: [
+                            { id: 6, titulo: 'Tags HTML Essenciais',
+                                descricao: 'Parágrafos, headings, listas, links e imagens.', duracao: '22min',
+                                status: 'locked' },
+                            { id: 7, titulo: 'HTML Semântico', descricao: 'Header, nav, main, section, article, aside e footer.',
+                                duracao: '20min', status: 'locked' },
+                            { id: 8, titulo: 'Formulários HTML', descricao: 'Inputs, validação nativa e boas práticas de acessibilidade.',
+                                duracao: '28min', status: 'locked' },
+                        ]
+                    },
+                    { id: 3, nome: 'CSS3 Moderno', icone: '🎨', descricao: 'Estilização avançada com Flexbox, Grid e animações CSS.',
+                        aulas: [
+                            { id: 9, titulo: 'Fundamentos do CSS', descricao: 'Seletores, propriedades, cascata e especificidade.',
+                                duracao: '25min', status: 'locked' },
+                            { id: 10, titulo: 'Flexbox na Prática', descricao: 'Layouts flexíveis e alinhamento com Flexbox.',
+                                duracao: '30min', status: 'locked' },
+                            { id: 11, titulo: 'CSS Grid Layout', descricao: 'Construindo layouts complexos com Grid de forma simples.',
+                                duracao: '35min', status: 'locked' },
+                        ]
+                    },
+                    { id: 4, nome: 'JavaScript ES6+', icone: '⚡', descricao: 'Programação interativa com JavaScript moderno e boas práticas.',
+                        aulas: [
+                            { id: 12, titulo: 'Variáveis e Tipos', descricao: 'Let, const, tipos primitivos e template literals.',
+                                duracao: '20min', status: 'locked' },
+                            { id: 13, titulo: 'Funções e Arrow Functions',
+                                descricao: 'Declaração, parâmetros, retorno e arrow functions.', duracao: '25min',
+                                status: 'locked' },
+                            { id: 14, titulo: 'Manipulação do DOM', descricao: 'Selecionando e modificando elementos HTML com JS.',
+                                duracao: '30min', status: 'locked' },
+                        ]
+                    },
+                ]
+            };
+
+            // ============================================================
+            // GERENCIAMENTO DE TEMA (Dark Mode)
+            // ============================================================
+            const themeToggle = document.getElementById('themeToggle');
+            const htmlElement = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('techacademy-theme') || 'light';
+            }
+
+            function applyTheme(theme) {
+                htmlElement.setAttribute('data-theme', theme);
+                localStorage.setItem('techacademy-theme', theme);
+            }
+
+            // Aplica tema salvo ao carregar
+            applyTheme(getSavedTheme());
+
+            themeToggle.addEventListener('click', () => {
+                const current = htmlElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                applyTheme(next);
+            });
+
+            // ============================================================
+            // NAVEGAÇÃO STICKY E SCROLL
+            // ============================================================
+            const mainNav = document.getElementById('mainNav');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            function handleScroll() {
+                const scrollY = window.scrollY;
+
+                // Efeito na navbar
+                if (scrollY > 50) {
+                    mainNav.classList.add('scrolled');
+                } else {
+                    mainNav.classList.remove('scrolled');
+                }
+
+                // Botão scroll to top
+                if (scrollY > 600) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ============================================================
+            // MENU MOBILE
+            // ============================================================
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            function toggleMobileMenu() {
+                const isActive = mobileMenu.classList.contains('active');
+                if (isActive) {
+                    mobileMenu.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                } else {
+                    mobileMenu.classList.add('active');
+                    hamburgerBtn.classList.add('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'true');
+                    mobileMenu.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            hamburgerBtn.addEventListener('click', toggleMobileMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('active')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // Fechar menu ao clicar fora (opcional)
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('active') &&
+                    !mobileMenu.contains(e.target) &&
+                    !hamburgerBtn.contains(e.target)) {
+                    toggleMobileMenu();
+                }
+            });
+
+            // ============================================================
+            // ANIMAÇÕES AO SCROLL (Intersection Observer)
+            // ============================================================
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ============================================================
+            // PREENCHER MÓDULOS NA HOME (Preview)
+            // ============================================================
+            const modulesGrid = document.getElementById('modulesGrid');
+            if (modulesGrid && aulasData && aulasData.modulos) {
+                aulasData.modulos.forEach(modulo => {
+                    const card = document.createElement('div');
+                    card.className = 'module-card reveal';
+                    card.setAttribute('role', 'article');
+                    card.setAttribute('tabindex', '0');
+                    card.innerHTML = `
+                                <span class="module-number" aria-hidden="true">0${modulo.id}</span>
+                                <div class="module-icon" aria-hidden="true">${modulo.icone}</div>
+                                <h3>${modulo.nome}</h3>
+                                <p>${modulo.descricao}</p>
+                                <span class="lesson-count">${modulo.aulas.length} aulas</span>
+                            `;
+                    card.addEventListener('click', () => {
+                        window.location.href = 'aulas.html';
+                    });
+                    card.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            window.location.href = 'aulas.html';
+                        }
+                    });
+                    modulesGrid.appendChild(card);
+                    // Re-observar novos elementos
+                    revealObserver.observe(card);
+                });
+            }
+
+            // ============================================================
+            // SALVAR PROGRESSO NO LOCALSTORAGE (simulação)
+            // ============================================================
+            function getProgress() {
+                try {
+                    return JSON.parse(localStorage.getItem('techacademy-progress')) || {};
+                } catch {
+                    return {};
+                }
+            }
+
+            function saveProgress(lessonId, status) {
+                const progress = getProgress();
+                progress[lessonId] = status;
+                localStorage.setItem('techacademy-progress', JSON.stringify(progress));
+            }
+
+            // Expor funções globalmente para uso em outras páginas
+            window.techAcademy = {
+                aulasData,
+                getProgress,
+                saveProgress,
+                getSavedTheme,
+                applyTheme,
+            };
+
+            // ============================================================
+            // LOG INICIAL
+            // ============================================================
+            console.log('🚀 TechAcademy - Plataforma Educacional');
+            console.log('📚 Módulos carregados:', aulasData.modulos.length);
+            console.log('🎨 Tema atual:', getSavedTheme());
+            console.log('💾 Progresso salvo:', getProgress());
+            console.log('✅ Página inicial pronta!');
+
+            // Disparar evento de scroll inicial
+            handleScroll();
+        })();
+    </script>
+</body>
+</html>
