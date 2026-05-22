@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma educacional moderna - Cursos online de tecnologia e desenvolvimento web com aulas interativas e conteúdo atualizado.">
-    <meta name="keywords" content="cursos online, aulas, tecnologia, desenvolvimento web, programação, html, css, javascript">
+    <meta name="description"
+        content="Plataforma educacional moderna - Cursos online de tecnologia e desenvolvimento web com aulas interativas e conteúdo atualizado.">
+    <meta name="keywords"
+        content="cursos online, aulas, tecnologia, desenvolvimento web, programação, html, css, javascript">
     <meta name="author" content="Prof. Digital">
-    <meta property="og:title" content="TechAcademy - Plataforma Educacional">
-    <meta property="og:description" content="Aprenda tecnologia com aulas modernas e interativas. Cursos de desenvolvimento web, front-end e muito mais.">
+    <meta property="og:title" content="ToonTechonolog.y - Plataforma Educacional">
+    <meta property="og:description"
+        content="Aprenda tecnologia com aulas modernas e interativas. Cursos de desenvolvimento web, front-end e muito mais.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop">
-    <meta property="og:url" content="https://techacademy.com">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://toontechonolog.y">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#4f46e5">
-    <title>TechAcademy - Plataforma Educacional | Cursos de Tecnologia</title>
+    <title>ToonTechonolog.y - Plataforma Educacional | Cursos de Tecnologia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         /* ============================================================
-           CSS COMPLETO - SEM HERO, SEM CTA, SEM MÓDULOS PREVIEW
+           CSS COMPLETO - SEM HERO, CTA, MÓDULOS, SEM LINKS SOCIAIS E SEM STATS
            ============================================================ */
 
         /* --- VARIÁVEIS CSS (:root) --- */
         :root {
-            /* Cores - Tema Claro */
             --color-primary: #4f46e5;
             --color-primary-hover: #4338ca;
             --color-primary-light: #eef2ff;
@@ -38,7 +44,6 @@
             --color-danger: #ef4444;
             --color-info: #3b82f6;
 
-            /* Superfícies - Claro */
             --bg-body: #f8fafc;
             --bg-surface: #ffffff;
             --bg-surface-alt: #f1f5f9;
@@ -54,7 +59,6 @@
             --bg-modal-overlay: rgba(0, 0, 0, 0.6);
             --bg-code: #1e293b;
 
-            /* Texto - Claro */
             --text-primary: #0f172a;
             --text-secondary: #475569;
             --text-tertiary: #94a3b8;
@@ -63,7 +67,6 @@
             --text-link: #4f46e5;
             --text-code: #e2e8f0;
 
-            /* Bordas - Claro */
             --border-color: #e2e8f0;
             --border-color-light: #f1f5f9;
             --border-radius-sm: 8px;
@@ -72,7 +75,6 @@
             --border-radius-xl: 24px;
             --border-radius-full: 9999px;
 
-            /* Sombras - Claro */
             --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
             --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -81,7 +83,6 @@
             --shadow-card-hover: 0 16px 40px rgba(79, 70, 229, 0.18);
             --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.08);
 
-            /* Tipografia */
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
             --font-size-xs: 0.75rem;
@@ -104,7 +105,6 @@
             --line-height-normal: 1.5;
             --line-height-relaxed: 1.7;
 
-            /* Espaçamento */
             --spacing-xs: 0.4rem;
             --spacing-sm: 0.7rem;
             --spacing-md: 1.2rem;
@@ -114,19 +114,16 @@
             --spacing-3xl: 7rem;
             --section-padding: clamp(3rem, 7vw, 7rem);
 
-            /* Transições */
             --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-            /* Layout */
             --max-width: 1200px;
             --nav-height: 72px;
             --container-padding: clamp(1rem, 4vw, 2.5rem);
         }
 
-        /* --- TEMA ESCURO --- */
         [data-theme="dark"] {
             --bg-body: #0f172a;
             --bg-surface: #1e293b;
@@ -159,7 +156,6 @@
             --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
 
-        /* --- RESET E ESTILOS BASE --- */
         *,
         *::before,
         *::after {
@@ -172,7 +168,6 @@
             scroll-behavior: smooth;
             scroll-padding-top: var(--nav-height);
             font-size: 16px;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
@@ -184,14 +179,6 @@
             transition: background-color var(--transition-base), color var(--transition-base);
             overflow-x: hidden;
             min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
         }
 
         a {
@@ -199,13 +186,9 @@
             text-decoration: none;
             transition: color var(--transition-fast);
         }
+
         a:hover {
             color: var(--color-primary-hover);
-        }
-        a:focus-visible {
-            outline: 3px solid var(--color-primary);
-            outline-offset: 3px;
-            border-radius: 4px;
         }
 
         button {
@@ -213,13 +196,6 @@
             font-family: inherit;
             border: none;
             background: none;
-            font-size: inherit;
-            transition: all var(--transition-fast);
-        }
-        button:focus-visible {
-            outline: 3px solid var(--color-primary);
-            outline-offset: 3px;
-            border-radius: 4px;
         }
 
         ul,
@@ -238,24 +214,11 @@
             color: var(--text-primary);
         }
 
-        /* --- UTILITÁRIOS --- */
         .container {
             width: 100%;
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 var(--container-padding);
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
         }
 
         .section {
@@ -266,6 +229,7 @@
             text-align: center;
             margin-bottom: var(--spacing-xl);
         }
+
         .section-header .badge {
             display: inline-block;
             background: var(--color-primary-light);
@@ -278,12 +242,13 @@
             border-radius: var(--border-radius-full);
             margin-bottom: var(--spacing-sm);
         }
+
         .section-header h2 {
             font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-extrabold);
             margin-bottom: var(--spacing-sm);
-            color: var(--text-primary);
         }
+
         .section-header p {
             font-size: var(--font-size-md);
             color: var(--text-secondary);
@@ -292,7 +257,6 @@
             line-height: var(--line-height-relaxed);
         }
 
-        /* --- BOTÕES --- */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -305,23 +269,6 @@
             transition: all var(--transition-spring);
             white-space: nowrap;
             text-decoration: none;
-            letter-spacing: 0.01em;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0);
-            transition: background var(--transition-fast);
-            border-radius: inherit;
-        }
-        .btn:hover::after {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .btn:active {
-            transform: scale(0.96);
         }
 
         .btn-primary {
@@ -329,11 +276,11 @@
             color: var(--text-on-primary);
             box-shadow: 0 4px 16px var(--color-primary-glow);
         }
+
         .btn-primary:hover {
             background: var(--color-primary-hover);
             box-shadow: 0 8px 28px var(--color-primary-glow);
             transform: translateY(-2px);
-            color: var(--text-on-primary);
         }
 
         .btn-secondary {
@@ -341,6 +288,7 @@
             color: var(--text-primary);
             border: 2px solid var(--border-color);
         }
+
         .btn-secondary:hover {
             border-color: var(--color-primary);
             color: var(--color-primary);
@@ -348,10 +296,6 @@
             transform: translateY(-2px);
         }
 
-        .btn-sm {
-            padding: 0.5rem 1.2rem;
-            font-size: var(--font-size-sm);
-        }
         .btn-lg {
             padding: 0.95rem 2.2rem;
             font-size: var(--font-size-lg);
@@ -367,16 +311,16 @@
             height: var(--nav-height);
             background: var(--bg-nav);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid transparent;
             transition: all var(--transition-base);
-            box-shadow: none;
         }
+
         .nav.scrolled {
             background: var(--bg-nav-scrolled);
             border-bottom-color: var(--border-color);
             box-shadow: var(--shadow-nav);
         }
+
         .nav-inner {
             display: flex;
             align-items: center;
@@ -386,6 +330,7 @@
             margin: 0 auto;
             padding: 0 var(--container-padding);
         }
+
         .nav-logo {
             display: flex;
             align-items: center;
@@ -393,9 +338,8 @@
             font-weight: var(--font-weight-extrabold);
             font-size: var(--font-size-xl);
             color: var(--text-primary);
-            text-decoration: none;
-            transition: color var(--transition-fast);
         }
+
         .nav-logo .logo-icon {
             background-image: url(assets/images/braincontrol.png);
             width: 40px;
@@ -403,21 +347,14 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: var(--border-radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1.3rem;
-            transition: transform var(--transition-spring);
         }
-        .nav-logo:hover .logo-icon {
-            transform: rotate(-8deg) scale(1.08);
-        }
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 0.3rem;
         }
+
         .nav-links a {
             padding: 0.55rem 1rem;
             border-radius: var(--border-radius-full);
@@ -425,23 +362,20 @@
             color: var(--text-secondary);
             transition: all var(--transition-fast);
             font-size: var(--font-size-sm);
-            position: relative;
         }
+
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--color-primary);
             background: var(--color-primary-light);
         }
-        .nav-links a.active {
-            font-weight: var(--font-weight-semibold);
-        }
+
         .nav-actions {
             display: flex;
             align-items: center;
             gap: 0.6rem;
         }
 
-        /* Botão Dark Mode */
         .theme-toggle {
             width: 40px;
             height: 40px;
@@ -452,29 +386,26 @@
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            cursor: pointer;
             transition: all var(--transition-spring);
             color: var(--text-primary);
         }
-        .theme-toggle:hover {
-            border-color: var(--color-primary);
-            background: var(--color-primary-light);
-            transform: rotate(20deg);
-        }
+
         .theme-toggle .icon-sun {
             display: none;
         }
+
         .theme-toggle .icon-moon {
             display: block;
         }
+
         [data-theme="dark"] .theme-toggle .icon-sun {
             display: block;
         }
+
         [data-theme="dark"] .theme-toggle .icon-moon {
             display: none;
         }
 
-        /* Menu Hamburguer */
         .hamburger {
             display: none;
             width: 40px;
@@ -483,33 +414,32 @@
             align-items: center;
             justify-content: center;
             gap: 5px;
-            cursor: pointer;
             border-radius: 50%;
             background: var(--bg-surface-alt);
             border: 2px solid var(--border-color);
-            z-index: 1001;
-            transition: all var(--transition-fast);
         }
+
         .hamburger span {
             display: block;
             width: 20px;
             height: 2px;
             background: var(--text-primary);
-            border-radius: 2px;
             transition: all var(--transition-spring);
         }
+
         .hamburger.active span:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
             transform: scaleX(0);
         }
+
         .hamburger.active span:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
         }
 
-        /* Mobile Menu Overlay */
         .mobile-menu {
             display: none;
             position: fixed;
@@ -525,34 +455,31 @@
             pointer-events: none;
             transition: opacity var(--transition-base);
         }
+
         .mobile-menu.active {
             opacity: 1;
             pointer-events: all;
         }
+
         .mobile-menu a {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-semibold);
             color: var(--text-primary);
             padding: 0.8rem 1.5rem;
             border-radius: var(--border-radius-full);
-            transition: all var(--transition-fast);
-        }
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            background: var(--color-primary-light);
-            color: var(--color-primary);
         }
 
-        /* --- SEÇÃO QUEM SOU EU --- */
         .about-section {
             background: var(--bg-surface);
         }
+
         .about-grid {
             display: grid;
             grid-template-columns: 320px 1fr;
             gap: clamp(2rem, 5vw, 4rem);
             align-items: start;
         }
+
         .about-photo-card {
             position: sticky;
             top: calc(var(--nav-height) + 2rem);
@@ -564,127 +491,94 @@
             border: 1px solid var(--border-color-light);
             transition: all var(--transition-base);
         }
+
         .about-photo {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin: 0 auto var(--spacing-md);
             background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 5rem;
             color: #fff;
             font-weight: var(--font-weight-extrabold);
             box-shadow: 0 8px 32px var(--color-primary-glow);
         }
+
         .about-photo-card h3 {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
+            margin-top: var(--spacing-sm);
         }
+
         .about-photo-card .role {
             color: var(--color-primary);
             font-weight: var(--font-weight-semibold);
             font-size: var(--font-size-sm);
             margin-bottom: var(--spacing-sm);
         }
-        .about-social-links {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: var(--spacing-md);
-            flex-wrap: wrap;
-        }
-        .about-social-links a {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--bg-surface-alt);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: var(--text-secondary);
-            transition: all var(--transition-spring);
-            border: 2px solid transparent;
-        }
-        .about-social-links a:hover {
+
+        .about-details .badge {
+            display: inline-block;
             background: var(--color-primary-light);
             color: var(--color-primary);
-            border-color: var(--color-primary);
-            transform: translateY(-3px);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 1rem;
+            border-radius: var(--border-radius-full);
+            margin-bottom: var(--spacing-sm);
         }
+
         .about-details h2 {
             font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-extrabold);
             margin-bottom: var(--spacing-sm);
         }
+
         .about-details .subtitle {
             color: var(--color-primary);
             font-weight: var(--font-weight-semibold);
             margin-bottom: var(--spacing-md);
             font-size: var(--font-size-md);
         }
+
         .about-details p {
             color: var(--text-secondary);
             line-height: var(--line-height-relaxed);
             margin-bottom: var(--spacing-md);
-        }
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            margin-top: var(--spacing-lg);
-        }
-        .about-stat {
-            background: var(--bg-surface-alt);
-            padding: 1rem;
-            border-radius: var(--border-radius-md);
-            text-align: center;
-            border: 1px solid var(--border-color-light);
-            transition: all var(--transition-base);
-        }
-        .about-stat:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--color-primary);
-        }
-        .about-stat .stat-number {
-            font-size: var(--font-size-2xl);
-            font-weight: var(--font-weight-extrabold);
-            color: var(--color-primary);
-        }
-        .about-stat .stat-label {
-            font-size: var(--font-size-xs);
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
         }
 
         /* --- SEÇÃO DO CURSO --- */
         .course-section {
             background: var(--bg-body);
         }
+
         .course-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
             margin-top: var(--spacing-lg);
         }
+
         .course-feature {
             background: var(--bg-card);
             padding: var(--spacing-lg);
             border-radius: var(--border-radius-lg);
             border: 1px solid var(--border-color-light);
-            box-shadow: var(--shadow-xs);
             transition: all var(--transition-spring);
             text-align: center;
         }
+
         .course-feature:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-card-hover);
             border-color: var(--color-primary);
         }
+
         .course-feature .feature-icon {
             width: 56px;
             height: 56px;
@@ -694,36 +588,37 @@
             justify-content: center;
             font-size: 1.5rem;
             margin: 0 auto var(--spacing-sm);
-            transition: transform var(--transition-spring);
         }
-        .course-feature:hover .feature-icon {
-            transform: scale(1.15) rotate(-5deg);
-        }
+
         .feature-icon.blue {
             background: #eef2ff;
             color: #4f46e5;
         }
+
         .feature-icon.cyan {
             background: #ecfeff;
             color: #06b6d4;
         }
+
         .feature-icon.amber {
             background: #fffbeb;
             color: #f59e0b;
         }
+
         .feature-icon.green {
             background: #ecfdf5;
             color: #10b981;
         }
+
         .course-feature h3 {
             font-size: var(--font-size-md);
             font-weight: var(--font-weight-semibold);
             margin-bottom: 0.3rem;
         }
+
         .course-feature p {
             color: var(--text-secondary);
             font-size: var(--font-size-sm);
-            line-height: var(--line-height-relaxed);
         }
 
         /* --- FOOTER --- */
@@ -732,30 +627,33 @@
             color: #cbd5e1;
             padding: var(--spacing-2xl) 0 var(--spacing-lg);
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 2rem;
             margin-bottom: var(--spacing-xl);
         }
+
         .footer h4 {
             color: #fff;
             font-weight: var(--font-weight-semibold);
             margin-bottom: var(--spacing-sm);
             font-size: var(--font-size-sm);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
+
         .footer a {
             color: #94a3b8;
             font-size: var(--font-size-sm);
             display: block;
             padding: 0.2rem 0;
-            transition: color var(--transition-fast);
         }
+
         .footer a:hover {
             color: #fff;
         }
+
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: var(--spacing-lg);
@@ -764,7 +662,6 @@
             color: #64748b;
         }
 
-        /* --- SCROLL TO TOP --- */
         .scroll-top-btn {
             position: fixed;
             bottom: 2rem;
@@ -784,45 +681,43 @@
             align-items: center;
             justify-content: center;
         }
+
         .scroll-top-btn.visible {
             opacity: 1;
             pointer-events: all;
         }
-        .scroll-top-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-        }
 
-        /* --- ANIMAÇÕES AO SCROLL --- */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
+
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* --- RESPONSIVIDADE --- */
+        /* RESPONSIVIDADE */
         @media (max-width: 1024px) {
             .about-grid {
                 grid-template-columns: 1fr;
             }
+
             .about-photo-card {
                 position: static;
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
                 align-items: center;
-                gap: 1rem;
-                text-align: left;
+                text-align: center;
             }
+
             .about-photo {
-                width: 100px;
-                height: 100px;
-                font-size: 2.5rem;
-                margin: 0;
+                width: 180px;
+                height: 180px;
+                font-size: 4.5rem;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -832,21 +727,28 @@
             .nav-links {
                 display: none;
             }
+
             .hamburger {
                 display: flex;
             }
+
             .mobile-menu {
                 display: flex;
             }
-            .about-stats {
-                grid-template-columns: 1fr 1fr;
-            }
+
             .course-features {
                 grid-template-columns: 1fr;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+
+            .about-photo {
+                width: 160px;
+                height: 160px;
+                font-size: 4rem;
             }
         }
 
@@ -854,32 +756,26 @@
             :root {
                 --nav-height: 60px;
             }
-            .btn {
-                padding: 0.6rem 1.3rem;
-                font-size: var(--font-size-sm);
+
+            .about-photo {
+                width: 140px;
+                height: 140px;
+                font-size: 3.5rem;
             }
-            .btn-lg {
-                padding: 0.7rem 1.6rem;
-                font-size: var(--font-size-base);
-            }
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
+
             .section-header h2 {
                 font-size: var(--font-size-2xl);
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- ============================================================
-    NAVEGAÇÃO PRINCIPAL
-    ============================================================ -->
-    <nav class="nav" id="mainNav" role="navigation" aria-label="Navegação principal">
+    <nav class="nav" id="mainNav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo" aria-label="TechAcademy - Página inicial">
+            <a href="index.html" class="nav-logo" aria-label="ToonTechonolog.y - Página inicial">
                 <div class="logo-icon"></div>
-                <span>TechAcademy</span>
+                <span>ToonTechonolog.y</span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="active">Home</a>
@@ -887,7 +783,7 @@
                 <a href="aulas.html">Aulas</a>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
                     <span class="icon-sun">☀️</span>
                     <span class="icon-moon">🌙</span>
                 </button>
@@ -900,70 +796,49 @@
         </div>
     </nav>
 
-    <!-- Menu Mobile -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html" class="active">Home</a>
         <a href="#sobre">Sobre</a>
         <a href="aulas.html">Aulas</a>
     </div>
 
-    <!-- ============================================================
-    SEÇÃO QUEM SOU EU
-    ============================================================ -->
-    <section class="section about-section" id="sobre" aria-labelledby="aboutTitle">
+    <!-- SEÇÃO SOBRE (SEM STATS E SEM LINKS SOCIAIS) -->
+    <section class="section about-section" id="sobre">
         <div class="container">
             <div class="about-grid reveal">
                 <div class="about-photo-card">
                     <div class="about-photo" aria-hidden="true">PD</div>
                     <h3>Prof. Digital</h3>
                     <p class="role">Desenvolvedor Full-Stack & Instrutor</p>
-                    <p style="font-size:0.85rem;color:var(--text-secondary);">10+ anos de experiência em desenvolvimento web e ensino de tecnologia.</p>
-                    <div class="about-social-links">
-                        <a href="#" aria-label="GitHub" title="GitHub">🐙</a>
-                        <a href="#" aria-label="LinkedIn" title="LinkedIn">💼</a>
-                        <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
-                        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-                    </div>
+                    <p style="font-size:0.85rem;color:var(--text-secondary);">10+ anos de experiência em desenvolvimento
+                        web e ensino de tecnologia.</p>
                 </div>
                 <div class="about-details">
-                    <span class="badge" style="background:var(--color-primary-light);color:var(--color-primary);">Sobre Mim</span>
-                    <h2 id="aboutTitle">Quem Sou Eu</h2>
+                    <span class="badge">Sobre Mim</span>
+                    <h2>Quem Sou Eu</h2>
                     <p class="subtitle">Transformando vidas através da educação em tecnologia</p>
-                    <p>Sou desenvolvedor full-stack com mais de <strong>10 anos de experiência</strong> no mercado. Formado em Ciência da Computação pela Universidade Federal, com especialização em Engenharia de Software e pós-graduação em Metodologias Ativas de Ensino.</p>
-                    <p>Já ajudei <strong>mais de 5.000 alunos</strong> a ingressarem na área de tecnologia através de cursos presenciais e online. Minha missão é democratizar o acesso ao conhecimento tech com aulas práticas, diretas e atualizadas.</p>
-                    <p><strong>Metodologia:</strong> Aprendizado baseado em projetos, com exercícios práticos, desafios reais e suporte contínuo. Acredito que se aprende fazendo!</p>
-                    <div class="about-stats">
-                        <div class="about-stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Anos de Experiência</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="stat-number">5k+</span>
-                            <span class="stat-label">Alunos</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="stat-number">40+</span>
-                            <span class="stat-label">Aulas</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="stat-number">4.9</span>
-                            <span class="stat-label">Avaliação</span>
-                        </div>
-                    </div>
+                    <p>Sou desenvolvedor full-stack com mais de <strong>10 anos de experiência</strong> no mercado.
+                        Formado em Ciência da Computação pela Universidade Federal, com especialização em Engenharia de
+                        Software e pós-graduação em Metodologias Ativas de Ensino.</p>
+                    <p>Já ajudei <strong>mais de 5.000 alunos</strong> a ingressarem na área de tecnologia através de
+                        cursos presenciais e online. Minha missão é democratizar o acesso ao conhecimento tech com aulas
+                        práticas, diretas e atualizadas.</p>
+                    <p><strong>Metodologia:</strong> Aprendizado baseado em projetos, com exercícios práticos, desafios
+                        reais e suporte contínuo. Acredito que se aprende fazendo!</p>
+                    <!-- A div about-stats foi completamente removida -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================
-    SEÇÃO DO CURSO
-    ============================================================ -->
-    <section class="section course-section" id="curso" aria-labelledby="courseTitle">
+    <!-- SEÇÃO DO CURSO -->
+    <section class="section course-section" id="curso">
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge">O Curso</span>
-                <h2 id="courseTitle">O Que Você Vai Aprender</h2>
-                <p>Um programa completo de desenvolvimento web, cobrindo desde os fundamentos até técnicas avançadas.</p>
+                <h2>O Que Você Vai Aprender</h2>
+                <p>Um programa completo de desenvolvimento web, cobrindo desde os fundamentos até técnicas avançadas.
+                </p>
             </div>
             <div class="course-features reveal">
                 <div class="course-feature">
@@ -974,31 +849,32 @@
                 <div class="course-feature">
                     <div class="feature-icon cyan">👥</div>
                     <h3>Público-Alvo</h3>
-                    <p>Iniciantes em programação, estudantes, profissionais em transição de carreira e entusiastas da tecnologia.</p>
+                    <p>Iniciantes em programação, estudantes, profissionais em transição de carreira e entusiastas da
+                        tecnologia.</p>
                 </div>
                 <div class="course-feature">
                     <div class="feature-icon amber">📋</div>
                     <h3>Pré-requisitos</h3>
-                    <p>Nenhum! Basta ter um computador com acesso à internet e vontade de aprender. Começamos do zero absoluto.</p>
+                    <p>Nenhum! Basta ter um computador com acesso à internet e vontade de aprender. Começamos do zero
+                        absoluto.</p>
                 </div>
                 <div class="course-feature">
                     <div class="feature-icon green">⏱️</div>
                     <h3>Duração</h3>
-                    <p>8 módulos com 40+ aulas, totalizando aproximadamente 60 horas de conteúdo prático e exercícios.</p>
+                    <p>8 módulos com 40+ aulas, totalizando aproximadamente 60 horas de conteúdo prático e exercícios.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================
-    FOOTER
-    ============================================================ -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h4>🎓 TechAcademy</h4>
-                    <p style="font-size:0.85rem;color:#94a3b8;margin-top:0.5rem;">Plataforma educacional moderna para quem quer dominar tecnologia. Aulas práticas, atualizadas e acessíveis.</p>
+                    <h4>🎓 ToonTechonolog.y</h4>
+                    <p style="font-size:0.85rem;color:#94a3b8;margin-top:0.5rem;">Plataforma educacional moderna para
+                        quem quer dominar tecnologia.</p>
                 </div>
                 <div>
                     <h4>Navegação</h4>
@@ -1015,131 +891,48 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 TechAcademy. Todos os direitos reservados. Feito com 💜 para educar.</p>
+                <p>&copy; 2026 ToonTechonolog.y. Todos os direitos reservados. Feito com 💜 para educar.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
-    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
 
-    <!-- ============================================================
-    JAVASCRIPT
-    ============================================================ -->
     <script>
-        (function() {
+        (function () {
             'use strict';
 
-            // ============================================================
-            // DADOS DAS AULAS (simulando JSON carregado, mantido para referência)
-            // ============================================================
-            const aulasData = {
-                modulos: [
-                    { id: 1, nome: 'Fundamentos da Web', icone: '🌐', descricao: 'Conceitos básicos de internet, navegadores e estrutura da web.',
-                        aulas: [
-                            { id: 1, titulo: 'Introdução à Internet', descricao: 'Como funciona a web, protocolos HTTP/HTTPS e estrutura cliente-servidor.',
-                                duracao: '15min', status: 'completed' },
-                            { id: 2, titulo: 'Estrutura de um Site', descricao: 'Entendendo a anatomia de páginas web e a tríade HTML, CSS e JS.',
-                                duracao: '20min', status: 'completed' },
-                            { id: 3, titulo: 'Ferramentas do Desenvolvedor',
-                                descricao: 'Configurando VS Code, navegador e extensões essenciais.', duracao: '18min',
-                                status: 'in-progress' },
-                            { id: 4, titulo: 'Versionamento com Git', descricao: 'Introdução ao Git e GitHub para controle de versões.',
-                                duracao: '25min', status: 'locked' },
-                            { id: 5, titulo: 'Hospedagem e Domínio', descricao: 'Como publicar seu site na internet gratuitamente.',
-                                duracao: '15min', status: 'locked' },
-                        ]
-                    },
-                    { id: 2, nome: 'HTML5 Semântico', icone: '📝', descricao: 'Estruturação de páginas com HTML5 moderno e tags semânticas.',
-                        aulas: [
-                            { id: 6, titulo: 'Tags HTML Essenciais',
-                                descricao: 'Parágrafos, headings, listas, links e imagens.', duracao: '22min',
-                                status: 'locked' },
-                            { id: 7, titulo: 'HTML Semântico', descricao: 'Header, nav, main, section, article, aside e footer.',
-                                duracao: '20min', status: 'locked' },
-                            { id: 8, titulo: 'Formulários HTML', descricao: 'Inputs, validação nativa e boas práticas de acessibilidade.',
-                                duracao: '28min', status: 'locked' },
-                        ]
-                    },
-                    { id: 3, nome: 'CSS3 Moderno', icone: '🎨', descricao: 'Estilização avançada com Flexbox, Grid e animações CSS.',
-                        aulas: [
-                            { id: 9, titulo: 'Fundamentos do CSS', descricao: 'Seletores, propriedades, cascata e especificidade.',
-                                duracao: '25min', status: 'locked' },
-                            { id: 10, titulo: 'Flexbox na Prática', descricao: 'Layouts flexíveis e alinhamento com Flexbox.',
-                                duracao: '30min', status: 'locked' },
-                            { id: 11, titulo: 'CSS Grid Layout', descricao: 'Construindo layouts complexos com Grid de forma simples.',
-                                duracao: '35min', status: 'locked' },
-                        ]
-                    },
-                    { id: 4, nome: 'JavaScript ES6+', icone: '⚡', descricao: 'Programação interativa com JavaScript moderno e boas práticas.',
-                        aulas: [
-                            { id: 12, titulo: 'Variáveis e Tipos', descricao: 'Let, const, tipos primitivos e template literals.',
-                                duracao: '20min', status: 'locked' },
-                            { id: 13, titulo: 'Funções e Arrow Functions',
-                                descricao: 'Declaração, parâmetros, retorno e arrow functions.', duracao: '25min',
-                                status: 'locked' },
-                            { id: 14, titulo: 'Manipulação do DOM', descricao: 'Selecionando e modificando elementos HTML com JS.',
-                                duracao: '30min', status: 'locked' },
-                        ]
-                    },
-                ]
-            };
-
-            // ============================================================
-            // GERENCIAMENTO DE TEMA (Dark Mode)
-            // ============================================================
+            // Tema
             const themeToggle = document.getElementById('themeToggle');
             const htmlElement = document.documentElement;
-
             function getSavedTheme() {
-                return localStorage.getItem('techacademy-theme') || 'light';
+                return localStorage.getItem('toontech-theme') || 'light';
             }
-
             function applyTheme(theme) {
                 htmlElement.setAttribute('data-theme', theme);
-                localStorage.setItem('techacademy-theme', theme);
+                localStorage.setItem('toontech-theme', theme);
             }
-
             applyTheme(getSavedTheme());
-
             themeToggle.addEventListener('click', () => {
                 const current = htmlElement.getAttribute('data-theme');
-                const next = current === 'light' ? 'dark' : 'light';
-                applyTheme(next);
+                applyTheme(current === 'light' ? 'dark' : 'light');
             });
 
-            // ============================================================
-            // NAVEGAÇÃO STICKY E SCROLL
-            // ============================================================
+            // Scroll e navbar
             const mainNav = document.getElementById('mainNav');
             const scrollTopBtn = document.getElementById('scrollTopBtn');
-
             function handleScroll() {
-                const scrollY = window.scrollY;
-                if (scrollY > 50) {
-                    mainNav.classList.add('scrolled');
-                } else {
-                    mainNav.classList.remove('scrolled');
-                }
-                if (scrollY > 600) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
-                }
+                if (window.scrollY > 50) mainNav.classList.add('scrolled');
+                else mainNav.classList.remove('scrolled');
+                if (window.scrollY > 600) scrollTopBtn.classList.add('visible');
+                else scrollTopBtn.classList.remove('visible');
             }
+            window.addEventListener('scroll', handleScroll);
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // ============================================================
-            // MENU MOBILE
-            // ============================================================
+            // Menu mobile
             const hamburgerBtn = document.getElementById('hamburgerBtn');
             const mobileMenu = document.getElementById('mobileMenu');
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-
             function toggleMobileMenu() {
                 const isActive = mobileMenu.classList.contains('active');
                 if (isActive) {
@@ -1156,26 +949,19 @@
                     document.body.style.overflow = 'hidden';
                 }
             }
-
             hamburgerBtn.addEventListener('click', toggleMobileMenu);
-            mobileLinks.forEach(link => {
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (mobileMenu.classList.contains('active')) toggleMobileMenu();
                 });
             });
-
             document.addEventListener('click', (e) => {
-                if (mobileMenu.classList.contains('active') &&
-                    !mobileMenu.contains(e.target) &&
-                    !hamburgerBtn.contains(e.target)) {
+                if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                     toggleMobileMenu();
                 }
             });
 
-            // ============================================================
-            // ANIMAÇÕES AO SCROLL (Intersection Observer)
-            // ============================================================
-            const revealElements = document.querySelectorAll('.reveal');
+            // Animações
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1184,40 +970,11 @@
                     }
                 });
             }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-            revealElements.forEach(el => revealObserver.observe(el));
-
-            // ============================================================
-            // SALVAR PROGRESSO NO LOCALSTORAGE (simulação)
-            // ============================================================
-            function getProgress() {
-                try {
-                    return JSON.parse(localStorage.getItem('techacademy-progress')) || {};
-                } catch {
-                    return {};
-                }
-            }
-
-            function saveProgress(lessonId, status) {
-                const progress = getProgress();
-                progress[lessonId] = status;
-                localStorage.setItem('techacademy-progress', JSON.stringify(progress));
-            }
-
-            window.techAcademy = {
-                aulasData,
-                getProgress,
-                saveProgress,
-                getSavedTheme,
-                applyTheme,
-            };
-
-            console.log('🚀 TechAcademy - Plataforma Educacional (Hero, CTA e Módulos removidos)');
-            console.log('📚 Dados dos módulos mantidos para referência:', aulasData.modulos.length);
-            console.log('🎨 Tema atual:', getSavedTheme());
-            console.log('✅ Página inicial simplificada pronta!');
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
             handleScroll();
         })();
     </script>
 </body>
+
 </html>
