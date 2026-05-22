@@ -493,18 +493,38 @@
         }
 
         .about-photo {
-            width: 200px;
-            height: 200px;
+            width: clamp(140px, 22vw, 260px);
+            aspect-ratio: 1 / 1;
+
             border-radius: 50%;
-            margin: 0 auto var(--spacing-md);
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: #fff;
-            font-weight: var(--font-weight-extrabold);
-            box-shadow: 0 8px 32px var(--color-primary-glow);
+
+            background-image: url(assets/images/IMG_20220710_063451_509\(1\).jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            margin-inline: auto;
+            margin-bottom: clamp(1rem, 3vw, 2rem);
+
+            border: 4px solid rgba(255, 255, 255, 0.12);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25),
+                0 0 25px rgba(99, 102, 241, 0.35);
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+            overflow: hidden;
+        }
+
+        .about-photo:hover {
+            transform: scale(1.04);
+
+            box-shadow:
+                0 14px 40px rgba(0, 0, 0, 0.35),
+                0 0 35px rgba(99, 102, 241, 0.5);
         }
 
         .about-photo-card h3 {
@@ -807,25 +827,28 @@
         <div class="container">
             <div class="about-grid reveal">
                 <div class="about-photo-card">
-                    <div class="about-photo" aria-hidden="true">PD</div>
-                    <h3>Prof. Digital</h3>
-                    <p class="role">Desenvolvedor Full-Stack & Instrutor</p>
-                    <p style="font-size:0.85rem;color:var(--text-secondary);">10+ anos de experiência em desenvolvimento
-                        web e ensino de tecnologia.</p>
+                    <div class="about-photo" aria-hidden="true"></div>
+                    <h3>Teacher Lauro</h3>
+                    <p class="role">Desenvolvedor Web/DATA & Instrutor</p>
+                    <p style="font-size:0.85rem;color:var(--text-secondary);">Há 5 anos professor e instrutor de Lógica
+                        de Programção.</p>
                 </div>
                 <div class="about-details">
                     <span class="badge">Sobre Mim</span>
                     <h2>Quem Sou Eu</h2>
-                    <p class="subtitle">Transformando vidas através da educação em tecnologia</p>
-                    <p>Sou desenvolvedor full-stack com mais de <strong>10 anos de experiência</strong> no mercado.
-                        Formado em Ciência da Computação pela Universidade Federal, com especialização em Engenharia de
-                        Software e pós-graduação em Metodologias Ativas de Ensino.</p>
-                    <p>Já ajudei <strong>mais de 5.000 alunos</strong> a ingressarem na área de tecnologia através de
-                        cursos presenciais e online. Minha missão é democratizar o acesso ao conhecimento tech com aulas
-                        práticas, diretas e atualizadas.</p>
-                    <p><strong>Metodologia:</strong> Aprendizado baseado em projetos, com exercícios práticos, desafios
-                        reais e suporte contínuo. Acredito que se aprende fazendo!</p>
-                    <!-- A div about-stats foi completamente removida -->
+                    <p class="subtitle"><b>"[...] O que não nos destrói, nos torna ainda mais forte." - Maximillion J.
+                            Pegasus.</b></p>
+                    <p> Olá! Me chamo Lauro. Serei o profesor de vocês nessa saga rumo <strong>À FLUÊNCIA
+                            TECNOLÓGICA.</strong></p>
+                    <p><strong>MAIS ANTES DE DARMOS INÍCIO AO QUE VAMO APRENDER EU QUERO AGORA CONHECER
+                            VOCÊS:...</strong></p>
+                    <p>1º - Fala o teu nome;<br>
+                        2º - Fala a tua idade;<br>
+                        3º - Fala a tua série na escola;<br>
+                        4º - Matéria favorita;<br>
+                        5º - O que você mais gosta de fazer;<br>
+                        6º - O que você quer aprender aqui.
+                    </p>
                 </div>
             </div>
         </div>
@@ -836,33 +859,39 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge">O Curso</span>
-                <h2>O Que Você Vai Aprender</h2>
-                <p>Um programa completo de desenvolvimento web, cobrindo desde os fundamentos até técnicas avançadas.
-                </p>
+                <h2>O que vocês irão aprender</h2>
+                <p>Técnicas de lógica de programção utilizando 3 ferramentas ao longo de todo o curso</p>
             </div>
             <div class="course-features reveal">
                 <div class="course-feature">
-                    <div class="feature-icon blue">🎯</div>
-                    <h3>Objetivos Gerais</h3>
-                    <p>Dominar HTML5, CSS3 e JavaScript ES6+ para construir sites e aplicações web modernas do zero.</p>
+                    <div class="feature-icon blue"></div>
+                    <h3>Scratch</h3>
+                    <p></p>
                 </div>
                 <div class="course-feature">
-                    <div class="feature-icon cyan">👥</div>
-                    <h3>Público-Alvo</h3>
-                    <p>Iniciantes em programação, estudantes, profissionais em transição de carreira e entusiastas da
-                        tecnologia.</p>
+                    <div class="feature-icon cyan"></div>
+                    <h3>MIT App Inventor (pt.1)</h3>
+                    <p></p>
                 </div>
                 <div class="course-feature">
-                    <div class="feature-icon amber">📋</div>
-                    <h3>Pré-requisitos</h3>
-                    <p>Nenhum! Basta ter um computador com acesso à internet e vontade de aprender. Começamos do zero
-                        absoluto.</p>
+                    <div class="feature-icon amber"></div>
+                    <h3>MIT App Inventor (pt.2)</h3>
+                    <p></p>
                 </div>
                 <div class="course-feature">
-                    <div class="feature-icon green">⏱️</div>
-                    <h3>Duração</h3>
-                    <p>8 módulos com 40+ aulas, totalizando aproximadamente 60 horas de conteúdo prático e exercícios.
-                    </p>
+                    <div class="feature-icon blue"></div>
+                    <h3>Roblox (Roblox Studio)(pt.1)</h3>
+                    <p></p>
+                </div>
+                <div class="course-feature">
+                    <div class="feature-icon cyan"></div>
+                    <h3>Roblox (Roblox Studio)(pt.2)</h3>
+                    <p></p>
+                </div>
+                <div class="course-feature">
+                    <div class="feature-icon amber"></div>
+                    <h3>Roblox (Roblox Studio)(pt.3)</h3>
+                    <p></p>
                 </div>
             </div>
         </div>
